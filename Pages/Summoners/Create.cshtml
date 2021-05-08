@@ -1,0 +1,119 @@
+﻿@page
+@model LeagueMatchHistory.Pages.Summoners.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Summoner</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.SummonerId" class="control-label"></label>
+                <input asp-for="Summoner.SummonerId" class="form-control" />
+                <span asp-validation-for="Summoner.SummonerId" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.AccountId" class="control-label"></label>
+                <input asp-for="Summoner.AccountId" class="form-control" />
+                <span asp-validation-for="Summoner.AccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.PuuId" class="control-label"></label>
+                <input asp-for="Summoner.PuuId" class="form-control" />
+                <span asp-validation-for="Summoner.PuuId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Summoner.SummonerName" class="control-label"></label>
+                <input asp-for="Summoner.SummonerName" class="form-control" />
+                <span asp-validation-for="Summoner.SummonerName" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.RevisionDate" class="control-label"></label>
+                <input asp-for="Summoner.RevisionDate" class="form-control" />
+                <span asp-validation-for="Summoner.RevisionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.SummonerLevel" class="control-label"></label>
+                <input asp-for="Summoner.SummonerLevel" class="form-control" />
+                <span asp-validation-for="Summoner.SummonerLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.LeagueId" class="control-label"></label>
+                <input asp-for="Summoner.LeagueId" class="form-control" />
+                <span asp-validation-for="Summoner.LeagueId" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.QueueType" class="control-label"></label>
+                <input asp-for="Summoner.QueueType" class="form-control" />
+                <span asp-validation-for="Summoner.QueueType" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.Tier" class="control-label"></label>
+                <input asp-for="Summoner.Tier" class="form-control" />
+                <span asp-validation-for="Summoner.Tier" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.Rank" class="control-label"></label>
+                <input asp-for="Summoner.Rank" class="form-control" />
+                <span asp-validation-for="Summoner.Rank" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.ProfileIconId" class="control-label"></label>
+                <input asp-for="Summoner.ProfileIconId" class="form-control" />
+                <span asp-validation-for="Summoner.ProfileIconId" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.LeaguePoints" class="control-label"></label>
+                <input asp-for="Summoner.LeaguePoints" class="form-control" />
+                <span asp-validation-for="Summoner.LeaguePoints" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.Wins" class="control-label"></label>
+                <input asp-for="Summoner.Wins" class="form-control" />
+                <span asp-validation-for="Summoner.Wins" class="text-danger"></span>
+            </div>
+            <div class="form-group HiddenElement">
+                <label asp-for="Summoner.Losses" class="control-label"></label>
+                <input asp-for="Summoner.Losses" class="form-control" />
+                <span asp-validation-for="Summoner.Losses" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check HiddenElement">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Summoner.Veteran" /> @Html.DisplayNameFor(model => model.Summoner.Veteran)
+                </label>
+            </div>
+            <div class="form-group form-check HiddenElement">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Summoner.Inactive" /> @Html.DisplayNameFor(model => model.Summoner.Inactive)
+                </label>
+            </div>
+            <div class="form-group form-check HiddenElement">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Summoner.FreshBlood" /> @Html.DisplayNameFor(model => model.Summoner.FreshBlood)
+                </label>
+            </div>
+            <div class="form-group form-check HiddenElement">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Summoner.HotStreak" /> @Html.DisplayNameFor(model => model.Summoner.HotStreak)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
