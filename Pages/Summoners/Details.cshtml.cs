@@ -21,6 +21,8 @@ namespace LeagueMatchHistory.Pages.Summoners
 
         public Summoner Summoner { get; set; }
 
+        public DateTimeOffset RevisionDate {get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -29,6 +31,9 @@ namespace LeagueMatchHistory.Pages.Summoners
             }
 
             Summoner = await _context.Summoner.FirstOrDefaultAsync(m => m.ID == id);
+
+
+            RevisionDate = DateTimeOffset.FromUnixTimeMilliseconds(Summoner.RevisionDate);
 
             if (Summoner == null)
             {

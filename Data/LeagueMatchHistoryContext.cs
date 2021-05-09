@@ -15,5 +15,9 @@ namespace LeagueMatchHistory.Data
         }
 
         public DbSet<LeagueMatchHistory.Models.Summoner> Summoner { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.SummonerAccountInfo> SummonerAccountInfo { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.RankedInfo> RankedInfo { get; set; }
     }
 }

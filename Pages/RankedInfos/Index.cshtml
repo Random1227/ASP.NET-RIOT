@@ -1,0 +1,114 @@
+﻿@page
+@model LeagueMatchHistory.Pages.RankedInfos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].LeagueId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].QueueType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Tier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Rank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].SummonerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].SummonerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].LeaguePoints)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Wins)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Losses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Veteran)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].Inactive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].FreshBlood)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].HotStreak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RankedInfo[0].LastUpdated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.RankedInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeagueId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueueType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummonerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummonerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaguePoints)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Losses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Veteran)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inactive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreshBlood)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HotStreak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdated)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

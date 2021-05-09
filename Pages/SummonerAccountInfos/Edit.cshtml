@@ -1,0 +1,75 @@
+﻿@page
+@model LeagueMatchHistory.Pages.SummonerAccountInfos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>SummonerAccountInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SummonerAccountInfo.ID" />
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.SummonerId" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.SummonerId" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.SummonerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.AccountId" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.AccountId" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.AccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.PuuId" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.PuuId" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.PuuId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.SummonerName" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.SummonerName" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.SummonerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.RevisionDate" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.RevisionDate" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.RevisionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.SummonerLevel" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.SummonerLevel" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.SummonerLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.ProfileIconId" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.ProfileIconId" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.ProfileIconId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.LastUpdated" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.LastUpdated" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.LastUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SummonerAccountInfo.RecordCreated" class="control-label"></label>
+                <input asp-for="SummonerAccountInfo.RecordCreated" class="form-control" />
+                <span asp-validation-for="SummonerAccountInfo.RecordCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

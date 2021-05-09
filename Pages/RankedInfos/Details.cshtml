@@ -1,0 +1,103 @@
+﻿@page
+@model LeagueMatchHistory.Pages.RankedInfos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>RankedInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.LeagueId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.LeagueId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.QueueType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.QueueType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Tier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Tier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Rank)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Rank)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.SummonerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.SummonerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.SummonerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.SummonerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.LeaguePoints)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.LeaguePoints)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Wins)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Wins)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Losses)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Losses)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Veteran)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Veteran)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.Inactive)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.Inactive)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.FreshBlood)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.FreshBlood)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.HotStreak)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.HotStreak)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RankedInfo.LastUpdated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RankedInfo.LastUpdated)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.RankedInfo.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

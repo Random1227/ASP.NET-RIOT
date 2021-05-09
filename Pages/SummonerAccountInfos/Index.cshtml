@@ -1,0 +1,93 @@
+﻿@page
+@model LeagueMatchHistory.Pages.SummonerAccountInfos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].SummonerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].AccountId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].PuuId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].SummonerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].RevisionDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].SummonerLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].ProfileIconId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].LastUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].RecordCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SummonerAccountInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummonerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PuuId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummonerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevisionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummonerLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileIconId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecordCreated)
+            </td>
+            <td>
+                @foreach(var RANKINFO in Model.RankedInfo)
+                {
+                    if(item.SummonerId == RANKINFO.SummonerId)
+                    {
+                        <p>@RANKINFO.SummonerAccountInfo.ProfileIconId</p>
+                    }
+                }
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

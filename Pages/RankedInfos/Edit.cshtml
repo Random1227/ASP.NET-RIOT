@@ -1,0 +1,100 @@
+﻿@page
+@model LeagueMatchHistory.Pages.RankedInfos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>RankedInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RankedInfo.ID" />
+            <div class="form-group">
+                <label asp-for="RankedInfo.LeagueId" class="control-label"></label>
+                <input asp-for="RankedInfo.LeagueId" class="form-control" />
+                <span asp-validation-for="RankedInfo.LeagueId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.QueueType" class="control-label"></label>
+                <input asp-for="RankedInfo.QueueType" class="form-control" />
+                <span asp-validation-for="RankedInfo.QueueType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.Tier" class="control-label"></label>
+                <input asp-for="RankedInfo.Tier" class="form-control" />
+                <span asp-validation-for="RankedInfo.Tier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.Rank" class="control-label"></label>
+                <input asp-for="RankedInfo.Rank" class="form-control" />
+                <span asp-validation-for="RankedInfo.Rank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.SummonerId" class="control-label"></label>
+                <input asp-for="RankedInfo.SummonerId" class="form-control" />
+                <span asp-validation-for="RankedInfo.SummonerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.SummonerName" class="control-label"></label>
+                <input asp-for="RankedInfo.SummonerName" class="form-control" />
+                <span asp-validation-for="RankedInfo.SummonerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.LeaguePoints" class="control-label"></label>
+                <input asp-for="RankedInfo.LeaguePoints" class="form-control" />
+                <span asp-validation-for="RankedInfo.LeaguePoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.Wins" class="control-label"></label>
+                <input asp-for="RankedInfo.Wins" class="form-control" />
+                <span asp-validation-for="RankedInfo.Wins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.Losses" class="control-label"></label>
+                <input asp-for="RankedInfo.Losses" class="form-control" />
+                <span asp-validation-for="RankedInfo.Losses" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RankedInfo.Veteran" /> @Html.DisplayNameFor(model => model.RankedInfo.Veteran)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RankedInfo.Inactive" /> @Html.DisplayNameFor(model => model.RankedInfo.Inactive)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RankedInfo.FreshBlood" /> @Html.DisplayNameFor(model => model.RankedInfo.FreshBlood)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="RankedInfo.HotStreak" /> @Html.DisplayNameFor(model => model.RankedInfo.HotStreak)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="RankedInfo.LastUpdated" class="control-label"></label>
+                <input asp-for="RankedInfo.LastUpdated" class="form-control" />
+                <span asp-validation-for="RankedInfo.LastUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
