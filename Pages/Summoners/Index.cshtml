@@ -14,123 +14,41 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].SummonerId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].AccountId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].PuuId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Summoner[0].SummonerName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].RevisionDate)
+                Profile Picture
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Summoner[0].SummonerLevel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].LeagueId)
+                Rank
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].QueueType)
+                Details
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Tier)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Rank)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].ProfileIconId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].LeaguePoints)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Wins)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Losses)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Veteran)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].Inactive)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].FreshBlood)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Summoner[0].HotStreak)
-            </th>
-            <th></th>
+
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.Summoner) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.SummonerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PuuId)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.SummonerName)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RevisionDate)
+            <td> 
+                @{string ProfilePicture = item.ProfileIconId + ".png";} 
+                <img src="~/GameAssets/dragontail-11.9.1/11.9.1/img/profileicon/@ProfilePicture" height="128" width="128"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SummonerLevel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LeagueId)
+                @Html.DisplayFor(modelItem => item.Tier) @Html.DisplayFor(modelItem => item.Rank) @Html.DisplayFor(modelItem => item.LeaguePoints) LP
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.QueueType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rank)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProfileIconId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LeaguePoints)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Wins)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Losses)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Veteran)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inactive)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FreshBlood)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HotStreak)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a>
             </td>
         </tr>
 }
