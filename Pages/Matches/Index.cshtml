@@ -1,0 +1,126 @@
+﻿@page
+@model LeagueMatchHistory.Pages.Matches.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="CreateMatch">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].MatchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].GameCreation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].GameDuration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].GameMode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].GameStartTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchInfo[0].GameType)
+            </th>
+            <th>
+                MapId
+            </th>
+            <th>
+                QueueId
+            </th>
+            <th>
+                Team 1
+            </th>
+            <th>
+                Team 2
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MatchInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchId)
+            </td>
+            <td>
+                @Model.Time(item.GameCreation)
+            </td>
+            <td>
+                @{var time = item.GameDuration / 6000;}
+                @time 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameMode)
+            </td>
+            <td>
+                @Model.Time(item.GameStartTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GameType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MapId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QueueId)
+            </td>
+            <td>
+            @foreach(var team in Model.TeamsInfos)
+                {
+                    if(team.TeamId == 100 && team.MatchId == item.MatchId)
+                    {
+                        if (team.Win)
+                        {
+                            <p>Victory</p>
+                        }
+                        else
+                        {
+                            <p>Defeat</p>
+                        }
+                        foreach(var participant in Model.ParticipantInfos)
+                        {
+                            if(participant.MatchId == item.MatchId && participant.teamId == team.TeamId)
+                            {
+                                <p>@participant.summonerName @participant.championName @participant.kills/@participant.deaths/@participant.assists</p>
+                            }
+                        }
+                    }
+                }
+
+            </td>
+            <td>
+                @foreach (var team in Model.TeamsInfos)
+                {
+                    if (team.TeamId == 200 && team.MatchId == item.MatchId)
+                    {
+                        if (team.Win)
+                        {
+                            <p>Victory</p>
+                        }
+                        else
+                        {
+                            <p>Defeat</p>
+                        }
+                        foreach (var participant in Model.ParticipantInfos)
+                        {
+                            if (participant.MatchId == item.MatchId && participant.teamId == team.TeamId)
+                            {
+                                <p>@participant.summonerName @participant.championName @participant.kills/@participant.deaths/@participant.assists</p>}
+                        }
+                    }
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

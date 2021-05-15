@@ -50,6 +50,8 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
 
             _context.Attach(SummonerAccountInfo).State = EntityState.Modified;
 
+            
+
             try
             {
                 await _context.SaveChangesAsync();

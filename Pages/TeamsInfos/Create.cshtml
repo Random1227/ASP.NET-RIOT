@@ -1,0 +1,129 @@
+﻿@page
+@model LeagueMatchHistory.Pages.TeamsInfos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TeamsInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.MatchId" class="control-label"></label>
+                <input asp-for="TeamsInfo.MatchId" class="form-control" />
+                <span asp-validation-for="TeamsInfo.MatchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.Ban0" class="control-label"></label>
+                <input asp-for="TeamsInfo.Ban0" class="form-control" />
+                <span asp-validation-for="TeamsInfo.Ban0" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.Ban1" class="control-label"></label>
+                <input asp-for="TeamsInfo.Ban1" class="form-control" />
+                <span asp-validation-for="TeamsInfo.Ban1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.Ban2" class="control-label"></label>
+                <input asp-for="TeamsInfo.Ban2" class="form-control" />
+                <span asp-validation-for="TeamsInfo.Ban2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.Ban3" class="control-label"></label>
+                <input asp-for="TeamsInfo.Ban3" class="form-control" />
+                <span asp-validation-for="TeamsInfo.Ban3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.Ban4" class="control-label"></label>
+                <input asp-for="TeamsInfo.Ban4" class="form-control" />
+                <span asp-validation-for="TeamsInfo.Ban4" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstBaron" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstBaron)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.BaronKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.BaronKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.BaronKills" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstBlood" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstBlood)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.ChampionKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.ChampionKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.ChampionKills" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstDragon" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstDragon)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.DragonKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.DragonKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.DragonKills" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstInhibitor" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstInhibitor)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.InhibitorKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.InhibitorKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.InhibitorKills" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstRitHerald" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstRitHerald)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.RiftHeraldKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.RiftHeraldKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.RiftHeraldKills" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.FirstTower" /> @Html.DisplayNameFor(model => model.TeamsInfo.FirstTower)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.TowerKills" class="control-label"></label>
+                <input asp-for="TeamsInfo.TowerKills" class="form-control" />
+                <span asp-validation-for="TeamsInfo.TowerKills" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamsInfo.TeamId" class="control-label"></label>
+                <input asp-for="TeamsInfo.TeamId" class="form-control" />
+                <span asp-validation-for="TeamsInfo.TeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="TeamsInfo.Win" /> @Html.DisplayNameFor(model => model.TeamsInfo.Win)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

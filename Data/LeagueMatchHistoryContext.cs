@@ -14,10 +14,16 @@ namespace LeagueMatchHistory.Data
         {
         }
 
-        public DbSet<LeagueMatchHistory.Models.Summoner> Summoner { get; set; }
-
         public DbSet<LeagueMatchHistory.Models.SummonerAccountInfo> SummonerAccountInfo { get; set; }
 
         public DbSet<LeagueMatchHistory.Models.RankedInfo> RankedInfo { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.MatchInfo> MatchInfo { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.TeamsInfo> TeamsInfo { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.ParticipantInfo> ParticipantInfo { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.MatchList> MatchList { get; set; }
     }
 }

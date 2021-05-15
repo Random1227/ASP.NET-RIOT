@@ -1,0 +1,150 @@
+﻿@page
+@model LeagueMatchHistory.Pages.TeamsInfos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].MatchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Ban0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Ban1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Ban2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Ban3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Ban4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstBaron)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].BaronKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstBlood)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].ChampionKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstDragon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].DragonKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstInhibitor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].InhibitorKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstRitHerald)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].RiftHeraldKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].FirstTower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].TowerKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].TeamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamsInfo[0].Win)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TeamsInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ban0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ban1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ban2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ban3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ban4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstBaron)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaronKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstBlood)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChampionKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstDragon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DragonKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstInhibitor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InhibitorKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstRitHerald)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RiftHeraldKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstTower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TowerKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Win)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

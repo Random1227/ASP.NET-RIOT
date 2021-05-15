@@ -1,0 +1,808 @@
+﻿@page
+@model LeagueMatchHistory.Pages.ParticipantInfos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ParticipantInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.MatchId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.MatchId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.teamId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.teamId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.assists)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.assists)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.baronKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.baronKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.bountyLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.bountyLevel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.champExperience)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.champExperience)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.champLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.champLevel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.championId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.championId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.championName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.championName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.championTransform)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.championTransform)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.consumablesPurchased)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.consumablesPurchased)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.damageDealtToBuildings)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.damageDealtToBuildings)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.damageDealtToObjectives)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.damageDealtToObjectives)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.damageDealtToTurrets)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.damageDealtToTurrets)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.damageSelfMitigated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.damageSelfMitigated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.deaths)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.deaths)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.detectorWardsPlaced)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.detectorWardsPlaced)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.doubleKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.doubleKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.dragonKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.dragonKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.firstBloodAssist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.firstBloodAssist)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.firstBloodKill)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.firstBloodKill)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.firstTowerAssist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.firstTowerAssist)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.firstTowerKill)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.firstTowerKill)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.gameEndedInEarlySurrender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.gameEndedInEarlySurrender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.gameEndedInSurrender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.gameEndedInSurrender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.goldEarned)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.goldEarned)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.goldSpent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.goldSpent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.individualPosition)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.individualPosition)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.inhibitorKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.inhibitorKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.inhibitorsLost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.inhibitorsLost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.item6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.item6)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.itemsPurchased)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.itemsPurchased)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.killingSprees)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.killingSprees)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.kills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.kills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.lane)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.lane)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.largestCriticalStrike)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.largestCriticalStrike)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.largestKillingSpree)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.largestKillingSpree)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.largestMultiKill)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.largestMultiKill)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.longestTimeSpentLiving)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.longestTimeSpentLiving)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.magicDamageDealt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.magicDamageDealt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.magicDamageDealtToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.magicDamageDealtToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.magicDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.magicDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.neutralMinionsKilled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.neutralMinionsKilled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.nexusKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.nexusKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.nexusLost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.nexusLost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.objectivesStolen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.objectivesStolen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.objectivesStolenAssists)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.objectivesStolenAssists)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.participantId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.participantId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.pentaKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.pentaKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.StatPerks1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.StatPerks1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.StatPerks2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.StatPerks2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.StatPerks3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.StatPerks3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimaryStyle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimaryStyle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary0Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary0Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary0Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary0Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary0Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary0Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary1Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary1Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary1Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary1Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary1Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary1Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary2Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary2Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary2Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary2Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary2Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary2Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary3Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary3Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary3Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary3Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkPrimary3Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkPrimary3Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSecondayStyle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSecondayStyle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday0Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday0Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday0Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday0Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday0Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday0Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday1Var1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday1Var1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday1Var2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday1Var2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.PerkSeconday1Var3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.PerkSeconday1Var3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.physicalDamageDealt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.physicalDamageDealt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.physicalDamageDealtToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.physicalDamageDealtToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.physicalDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.physicalDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.profileIcon)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.profileIcon)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.puuid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.puuid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.quadraKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.quadraKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.riotIdName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.riotIdName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.riotIdTagline)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.riotIdTagline)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.sightwardsBoughtInGame)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.sightwardsBoughtInGame)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.spell1Casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.spell1Casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.spell2Casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.spell2Casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.spell3Casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.spell3Casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.spell4casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.spell4casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summoner1Casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summoner1Casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summoner1Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summoner1Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summoner2Casts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summoner2Casts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summoner2Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summoner2Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summonerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summonerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summonerLevel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summonerLevel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.summonerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.summonerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.teamEarlySurrendered)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.teamEarlySurrendered)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.teamPosition)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.teamPosition)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.timeCCingOthers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.timeCCingOthers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.timePlayed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.timePlayed)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalDamageDealt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalDamageDealt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalDamageDealtToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalDamageDealtToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalDamageShieldedOnTeammates)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalDamageShieldedOnTeammates)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalHeal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalHeal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalHealsOnTeammates)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalHealsOnTeammates)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalMinionsKilled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalMinionsKilled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalTimeCCDealt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalTimeCCDealt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalTimeSpentDead)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalTimeSpentDead)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.totalUnitsHealed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.totalUnitsHealed)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.tripleKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.tripleKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.trueDamageDealt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.trueDamageDealt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.trueDamageDealtToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.trueDamageDealtToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.trueDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.trueDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.turretKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.turretKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.turretsLost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.turretsLost)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.unrealKills)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.unrealKills)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.visionScore)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.visionScore)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.visionWardsBoughtInGame)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.visionWardsBoughtInGame)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.wardsKilled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.wardsKilled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.wardsPlaced)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.wardsPlaced)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantInfo.win)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantInfo.win)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ParticipantInfo.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

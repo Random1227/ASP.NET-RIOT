@@ -70,14 +70,15 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
              * 
              */
 
-
+            
 
             SummonerAccountInfos = await _context.SummonerAccountInfo.ToListAsync();//fills the IList<Summoners> property with all of the Summoners in the Summoners table
             foreach (var summoner in SummonerAccountInfos)//goes through each
             {
                 if (summoner.SummonerName == SummonerAccountInfo.SummonerName)//if it already exists, then just go back to the page
                 {
-                    return RedirectToPage("./Index");
+                    //update the summoner if they exist
+
                 }
             }
             //VERY IMPORTANT
@@ -89,7 +90,7 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
             //for now i'll just overwrite the api_key to get useful stuff to work with MATCH-V5
 
             //PUT YOUR DEV KEY HERE
-            api_key = "RGAPI-0803e298-7128-485a-8990-3d2d14e7385f";
+            api_key = "RGAPI-b041a7e4-80f6-496a-894c-1c3c9107552a";
 
             //builds the string to summoner info
             string UrlSummoner = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + SummonerAccountInfo.SummonerName + "?api_key=" + api_key;
@@ -164,7 +165,6 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
                     ranked.Wins = RankInfoForQueueType.wins;
 
                     _context.RankedInfo.Add(ranked);
-                    await _context.SaveChangesAsync();
 
                 }
             }

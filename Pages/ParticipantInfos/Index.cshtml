@@ -1,0 +1,816 @@
+﻿@page
+@model LeagueMatchHistory.Pages.ParticipantInfos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].MatchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].teamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].assists)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].baronKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].bountyLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].champExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].champLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].championId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].championName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].championTransform)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].consumablesPurchased)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].damageDealtToBuildings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].damageDealtToObjectives)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].damageDealtToTurrets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].damageSelfMitigated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].deaths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].detectorWardsPlaced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].doubleKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].dragonKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].firstBloodAssist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].firstBloodKill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].firstTowerAssist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].firstTowerKill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].gameEndedInEarlySurrender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].gameEndedInSurrender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].goldEarned)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].goldSpent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].individualPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].inhibitorKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].inhibitorsLost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].item6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].itemsPurchased)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].killingSprees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].kills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].lane)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].largestCriticalStrike)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].largestKillingSpree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].largestMultiKill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].longestTimeSpentLiving)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].magicDamageDealt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].magicDamageDealtToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].magicDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].neutralMinionsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].nexusKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].nexusLost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].objectivesStolen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].objectivesStolenAssists)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].participantId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].pentaKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].StatPerks1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].StatPerks2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].StatPerks3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimaryStyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary0Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary0Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary0Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary1Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary1Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary1Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary2Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary2Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary2Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary3Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary3Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkPrimary3Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSecondayStyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday0Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday0Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday0Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday1Var1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday1Var2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].PerkSeconday1Var3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].physicalDamageDealt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].physicalDamageDealtToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].physicalDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].profileIcon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].puuid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].quadraKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].riotIdName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].riotIdTagline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].sightwardsBoughtInGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].spell1Casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].spell2Casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].spell3Casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].spell4casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summoner1Casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summoner1Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summoner2Casts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summoner2Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summonerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summonerLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].summonerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].teamEarlySurrendered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].teamPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].timeCCingOthers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].timePlayed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalDamageDealt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalDamageDealtToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalDamageShieldedOnTeammates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalHeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalHealsOnTeammates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalMinionsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalTimeCCDealt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalTimeSpentDead)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].totalUnitsHealed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].tripleKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].trueDamageDealt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].trueDamageDealtToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].trueDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].turretKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].turretsLost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].unrealKills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].visionScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].visionWardsBoughtInGame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].wardsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].wardsPlaced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantInfo[0].win)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ParticipantInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assists)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.baronKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bountyLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.champExperience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.champLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.championId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.championName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.championTransform)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.consumablesPurchased)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.damageDealtToBuildings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.damageDealtToObjectives)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.damageDealtToTurrets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.damageSelfMitigated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.detectorWardsPlaced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doubleKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dragonKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstBloodAssist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstBloodKill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstTowerAssist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstTowerKill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameEndedInEarlySurrender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameEndedInSurrender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goldEarned)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goldSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.individualPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inhibitorKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inhibitorsLost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.item6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.itemsPurchased)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.killingSprees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lane)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.largestCriticalStrike)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.largestKillingSpree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.largestMultiKill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.longestTimeSpentLiving)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageDealt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageDealtToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.neutralMinionsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nexusKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nexusLost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.objectivesStolen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.objectivesStolenAssists)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.participantId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pentaKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatPerks1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatPerks2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatPerks3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimaryStyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary0Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary0Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary0Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary1Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary1Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary1Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary2Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary2Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary2Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary3Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary3Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkPrimary3Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSecondayStyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday0Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday0Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday0Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday1Var1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday1Var2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerkSeconday1Var3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageDealt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageDealtToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.profileIcon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puuid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quadraKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.riotIdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.riotIdTagline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.role)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sightwardsBoughtInGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spell1Casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spell2Casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spell3Casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spell4casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summoner1Casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summoner1Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summoner2Casts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summoner2Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summonerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summonerLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.summonerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamEarlySurrendered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timeCCingOthers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timePlayed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageDealt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageDealtToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageShieldedOnTeammates)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalHeal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalHealsOnTeammates)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalMinionsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalTimeCCDealt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalTimeSpentDead)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalUnitsHealed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tripleKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageDealt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageDealtToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.turretKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.turretsLost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unrealKills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.visionScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.visionWardsBoughtInGame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wardsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wardsPlaced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.win)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

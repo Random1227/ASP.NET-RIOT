@@ -22,6 +22,8 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
         [BindProperty]
         public SummonerAccountInfo SummonerAccountInfo { get; set; }
 
+        public IList<RankedInfo> RankedInfo { get; set; }
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
@@ -46,6 +48,19 @@ namespace LeagueMatchHistory.Pages.SummonerAccountInfos
             }
 
             SummonerAccountInfo = await _context.SummonerAccountInfo.FindAsync(id);
+
+            RankedInfo = await _context.RankedInfo.ToListAsync();
+
+
+
+            foreach(var item in RankedInfo)
+            {
+                if(item.SummonerId == SummonerAccountInfo.SummonerId)
+                {
+                    _context.RankedInfo.Remove(item);
+                }
+            }
+
 
             if (SummonerAccountInfo != null)
             {
