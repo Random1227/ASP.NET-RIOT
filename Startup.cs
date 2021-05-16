@@ -30,6 +30,7 @@ namespace LeagueMatchHistory
             services.AddDbContext<LeagueMatchHistoryContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LeagueMatchHistoryContext")));
 
+            Methods.apiCalls apiMethods = new Methods.apiCalls();
 
         }
 
