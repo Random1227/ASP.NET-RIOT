@@ -1,60 +1,37 @@
-﻿
-I think the key to doing this right will be properly laying out how the models (database) should work
+﻿Get spectate
 
-The things I want to hold 
-	1. Summoner Account Information
-	2. Summoner Ranked Information
-	3. Summoner's match history
-	4. Summoner's matches
-	5. Summoner's mastery scores
-	6. Currently in game? Dunno
+Get Mastery points
 
-The biggest issue I have is that I don't know the 'proper' way to handle this
-Lotta breakdowns could be done
-	So 
-		1. Summoner - Things from the summoner by summoner name API (one table, each entry is a unique summoner)
-		2. Summoner Ranked Info - Things from the league entries for user (one table, each entry is one queue_type, summoners can have multiple entries)
-		3. Match History - I honestly don't know - this is just a list of game_ids associated with a summoner name
-			I suppose this doesn't need to be held? This would just be called to add more matches to the database
-		4. Summoner's Matches - Holds the match info - would be massive, matches can overlap with users - would have to check if the match is already there
-		5. Champion mastery scores - a table with sumId, allchamps, then a score 
+Start Page - Search for a Summoner
+	if(Summoner.Exists)
+	{
+		Summoner.Update()//updates summoner info, ranked info, 	match history, 
+		RedirectToPage(SummonerDashboard)
+	}
+	if(!Summoner.Exists)
+	{
+		apiCalls.All()//call all apis
+		Summoner.Add()//add summoner to database - including summoner info, ranked info, matchlist, matchinfo, matchframes
+	}
 
-		6. Timeline could be done by just having separate frames as separate items in a database
-			then the other information could have the matchId to connect them all together
-				But that seems like a super whack way to do it, maybe I should've paid more attention in my Databases class
+Dashboard - Shows information about a summoner
+	for(display 20 games)
+	{
+		Fill out webpage that shows 
+			Summoner Info
+				Level, Name, Profile Picture, Highest Mastery Champions, Rank, Ranked winrate, most played champions (can be filtered by ranked/normal/aram) show winrate for champs + KDA, CS/min
+			Match
+				KDA, CS, CS/min, Level, Champ, Runes, Items, Gold, 
+				Can link to another page to show
+					Other players, full runes, gold graph (you can choose who to see)
+	}
 
-	Some of these will be massive classes and massive tables - I guess I'm not fully with it because I genuinely have no frame of reference for what a 'big' database is
-
-
-
-On the summoner index page, be able to click a button and update a single summoner from that page
-
-
-I want to do a match timeline, but genuinely have no clue how
-	My first idea would be to have each column be a timestamp (60 second increment) but I don't think you can dynamically have rows be different sizes
-
-
-
-	Whenever I create a new user it says that I'm explicitly setting the primary key somewhere, but I can't find where
-		But it still works perfectly???
-		Not fixed yet
-		Fixed it - I messed up and was saving changes too early - I thought that it would make a new item everytime but I guess it rolled over and took it as me trying to change the ID
+MatchbreakDownPage
+	if(MatchId == id)
+	{
+		show every event + break down per minute of champ/level/stat
+	}
 
 
 
-Next up -
-	1. Retrieve MatchList - string of game IDs
-	2. Get the MatchData - this will be fun - trying to break down the match data
-
-	GET MINISERIESDTO working, dunno if it does anything
-
-
-
-
-Add a timer to control rate limits for API requests
-	Development -
-		20 per second
-		100 per 2 minutes
-
-I think I want to move all requests into one class - centralize the api_keys and futurely implemeted rate limiting checks
-I could create the object in startup? - or just put the variables that limit rate and hold api_key into startup
+Fill out object information in methods

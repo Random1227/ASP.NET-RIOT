@@ -15,9 +15,12 @@ namespace LeagueMatchHistory
 {
     public class Startup
     {
+        public Methods.apiCalls apiCalls { get; set; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            apiCalls = new Methods.apiCalls();
         }
 
         public IConfiguration Configuration { get; }
@@ -29,8 +32,6 @@ namespace LeagueMatchHistory
 
             services.AddDbContext<LeagueMatchHistoryContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LeagueMatchHistoryContext")));
-
-            Methods.apiCalls apiMethods = new Methods.apiCalls();
 
         }
 

@@ -1,0 +1,253 @@
+﻿@page
+@model LeagueMatchHistory.Pages.MatchEvents.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MatchEvent</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.MatchId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.MatchId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.EventType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.EventType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.afterId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.afterId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.beforeId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.beforeId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.bounty)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.bounty)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.buildingType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.buildingType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.gameId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.gameId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.goldGain)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.goldGain)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.itemId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.itemId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.killStreakLength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.killStreakLength)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.killType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.killType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.killerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.killerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.killerTeamId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.killerTeamId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.laneType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.laneType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.level)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.level)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.levelUpType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.levelUpType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.monsterSubType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.monsterSubType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.monsterType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.monsterType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.participantId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.participantId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.x)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.x)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.y)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.y)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.realTimeStamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.realTimeStamp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.skillSlot)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.skillSlot)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.teamId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.teamId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.timestamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.timestamp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.towerType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.towerType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.winningTeam)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.winningTeam)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant6)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant7)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant7)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant8)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant8)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchEvent.assistingParticipant9)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchEvent.assistingParticipant9)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.MatchEvent.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

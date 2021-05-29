@@ -1,0 +1,224 @@
+﻿@page
+@model LeagueMatchHistory.Pages.MatchEvents.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MatchEvent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.MatchId" class="control-label"></label>
+                <input asp-for="MatchEvent.MatchId" class="form-control" />
+                <span asp-validation-for="MatchEvent.MatchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.EventType" class="control-label"></label>
+                <input asp-for="MatchEvent.EventType" class="form-control" />
+                <span asp-validation-for="MatchEvent.EventType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.afterId" class="control-label"></label>
+                <input asp-for="MatchEvent.afterId" class="form-control" />
+                <span asp-validation-for="MatchEvent.afterId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.beforeId" class="control-label"></label>
+                <input asp-for="MatchEvent.beforeId" class="form-control" />
+                <span asp-validation-for="MatchEvent.beforeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.bounty" class="control-label"></label>
+                <input asp-for="MatchEvent.bounty" class="form-control" />
+                <span asp-validation-for="MatchEvent.bounty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.buildingType" class="control-label"></label>
+                <input asp-for="MatchEvent.buildingType" class="form-control" />
+                <span asp-validation-for="MatchEvent.buildingType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.gameId" class="control-label"></label>
+                <input asp-for="MatchEvent.gameId" class="form-control" />
+                <span asp-validation-for="MatchEvent.gameId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.goldGain" class="control-label"></label>
+                <input asp-for="MatchEvent.goldGain" class="form-control" />
+                <span asp-validation-for="MatchEvent.goldGain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.itemId" class="control-label"></label>
+                <input asp-for="MatchEvent.itemId" class="form-control" />
+                <span asp-validation-for="MatchEvent.itemId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.killStreakLength" class="control-label"></label>
+                <input asp-for="MatchEvent.killStreakLength" class="form-control" />
+                <span asp-validation-for="MatchEvent.killStreakLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.killType" class="control-label"></label>
+                <input asp-for="MatchEvent.killType" class="form-control" />
+                <span asp-validation-for="MatchEvent.killType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.killerId" class="control-label"></label>
+                <input asp-for="MatchEvent.killerId" class="form-control" />
+                <span asp-validation-for="MatchEvent.killerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.killerTeamId" class="control-label"></label>
+                <input asp-for="MatchEvent.killerTeamId" class="form-control" />
+                <span asp-validation-for="MatchEvent.killerTeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.laneType" class="control-label"></label>
+                <input asp-for="MatchEvent.laneType" class="form-control" />
+                <span asp-validation-for="MatchEvent.laneType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.level" class="control-label"></label>
+                <input asp-for="MatchEvent.level" class="form-control" />
+                <span asp-validation-for="MatchEvent.level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.levelUpType" class="control-label"></label>
+                <input asp-for="MatchEvent.levelUpType" class="form-control" />
+                <span asp-validation-for="MatchEvent.levelUpType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.monsterSubType" class="control-label"></label>
+                <input asp-for="MatchEvent.monsterSubType" class="form-control" />
+                <span asp-validation-for="MatchEvent.monsterSubType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.monsterType" class="control-label"></label>
+                <input asp-for="MatchEvent.monsterType" class="form-control" />
+                <span asp-validation-for="MatchEvent.monsterType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.name" class="control-label"></label>
+                <input asp-for="MatchEvent.name" class="form-control" />
+                <span asp-validation-for="MatchEvent.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.participantId" class="control-label"></label>
+                <input asp-for="MatchEvent.participantId" class="form-control" />
+                <span asp-validation-for="MatchEvent.participantId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.x" class="control-label"></label>
+                <input asp-for="MatchEvent.x" class="form-control" />
+                <span asp-validation-for="MatchEvent.x" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.y" class="control-label"></label>
+                <input asp-for="MatchEvent.y" class="form-control" />
+                <span asp-validation-for="MatchEvent.y" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.realTimeStamp" class="control-label"></label>
+                <input asp-for="MatchEvent.realTimeStamp" class="form-control" />
+                <span asp-validation-for="MatchEvent.realTimeStamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.skillSlot" class="control-label"></label>
+                <input asp-for="MatchEvent.skillSlot" class="form-control" />
+                <span asp-validation-for="MatchEvent.skillSlot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.teamId" class="control-label"></label>
+                <input asp-for="MatchEvent.teamId" class="form-control" />
+                <span asp-validation-for="MatchEvent.teamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.timestamp" class="control-label"></label>
+                <input asp-for="MatchEvent.timestamp" class="form-control" />
+                <span asp-validation-for="MatchEvent.timestamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.towerType" class="control-label"></label>
+                <input asp-for="MatchEvent.towerType" class="form-control" />
+                <span asp-validation-for="MatchEvent.towerType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.type" class="control-label"></label>
+                <input asp-for="MatchEvent.type" class="form-control" />
+                <span asp-validation-for="MatchEvent.type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.winningTeam" class="control-label"></label>
+                <input asp-for="MatchEvent.winningTeam" class="form-control" />
+                <span asp-validation-for="MatchEvent.winningTeam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant0" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant0" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant0" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant1" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant1" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant2" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant2" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant3" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant3" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant4" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant4" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant5" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant5" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant6" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant6" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant7" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant7" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant8" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant8" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatchEvent.assistingParticipant9" class="control-label"></label>
+                <input asp-for="MatchEvent.assistingParticipant9" class="form-control" />
+                <span asp-validation-for="MatchEvent.assistingParticipant9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

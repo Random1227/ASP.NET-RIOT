@@ -392,3 +392,15 @@ C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\TeamsInfos\Details.csh
 C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\TeamsInfos\Edit.cshtml.g.cs
 C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\TeamsInfos\Index.cshtml.g.cs
 C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\TestPage.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MatchEvents\Create.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MatchEvents\Delete.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MatchEvents\Details.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MatchEvents\Edit.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MatchEvents\Index.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\ParticipantFramess\Create.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\ParticipantFramess\Delete.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\ParticipantFramess\Details.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\ParticipantFramess\Edit.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\ParticipantFramess\Index.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MainPages\SummonerMatchlist.cshtml.g.cs
+C:\Git Projects\ASP.NET-RIOT\obj\Debug\net5.0\Razor\Pages\MainPages\SummonerMatchDetails.cshtml.g.cs

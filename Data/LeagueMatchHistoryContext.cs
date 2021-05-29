@@ -25,5 +25,9 @@ namespace LeagueMatchHistory.Data
         public DbSet<LeagueMatchHistory.Models.ParticipantInfo> ParticipantInfo { get; set; }
 
         public DbSet<LeagueMatchHistory.Models.MatchList> MatchList { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.MatchEvent> MatchEvent { get; set; }
+
+        public DbSet<LeagueMatchHistory.Models.ParticipantFrames> ParticipantFrames { get; set; }
     }
 }

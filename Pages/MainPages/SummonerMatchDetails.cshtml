@@ -1,0 +1,97 @@
+﻿@page
+@model LeagueMatchHistory.Pages.MainPages.SummonerMatchDetailsModel
+
+@{
+    ViewData["Title"] = "SummonerMatchDetails";
+}
+
+<h1>SummonerMatchDetails</h1>
+
+<div>
+    <h4>MatchInfo</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.DataVersion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.DataVersion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.MatchId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.MatchId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameCreation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameCreation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameDuration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameMode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameMode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameStartTimeStamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameStartTimeStamp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.GameVersion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.GameVersion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.MapId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.MapId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.PlatformId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.PlatformId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MatchInfo.QueueId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MatchInfo.QueueId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.MatchInfo.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

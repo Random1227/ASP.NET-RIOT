@@ -1,0 +1,260 @@
+﻿@page
+@model LeagueMatchHistory.Pages.ParticipantFramess.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>ParticipantFrames</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ParticipantFrames.ID" />
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.MatchId" class="control-label"></label>
+                <input asp-for="ParticipantFrames.MatchId" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.MatchId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.currentGold" class="control-label"></label>
+                <input asp-for="ParticipantFrames.currentGold" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.currentGold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.goldPerSecond" class="control-label"></label>
+                <input asp-for="ParticipantFrames.goldPerSecond" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.goldPerSecond" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.jungleMinionsKilled" class="control-label"></label>
+                <input asp-for="ParticipantFrames.jungleMinionsKilled" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.jungleMinionsKilled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.level" class="control-label"></label>
+                <input asp-for="ParticipantFrames.level" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.minionsKilled" class="control-label"></label>
+                <input asp-for="ParticipantFrames.minionsKilled" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.minionsKilled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.participantId" class="control-label"></label>
+                <input asp-for="ParticipantFrames.participantId" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.participantId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.timeEnemySpentControlled" class="control-label"></label>
+                <input asp-for="ParticipantFrames.timeEnemySpentControlled" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.timeEnemySpentControlled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.totalGold" class="control-label"></label>
+                <input asp-for="ParticipantFrames.totalGold" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.totalGold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.xp" class="control-label"></label>
+                <input asp-for="ParticipantFrames.xp" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.xp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.x" class="control-label"></label>
+                <input asp-for="ParticipantFrames.x" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.x" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.y" class="control-label"></label>
+                <input asp-for="ParticipantFrames.y" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.y" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicDamageDone" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicDamageDone" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicDamageDone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicDamageDoneToChampions" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicDamageDoneToChampions" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicDamageDoneToChampions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicDamageTaken" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicDamageTaken" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicDamageTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.physicalDamageDone" class="control-label"></label>
+                <input asp-for="ParticipantFrames.physicalDamageDone" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.physicalDamageDone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.physicalDamageDoneToChampions" class="control-label"></label>
+                <input asp-for="ParticipantFrames.physicalDamageDoneToChampions" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.physicalDamageDoneToChampions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.physicalDamageTaken" class="control-label"></label>
+                <input asp-for="ParticipantFrames.physicalDamageTaken" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.physicalDamageTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.totalDamageDone" class="control-label"></label>
+                <input asp-for="ParticipantFrames.totalDamageDone" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.totalDamageDone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.totalDamageDoneToChampions" class="control-label"></label>
+                <input asp-for="ParticipantFrames.totalDamageDoneToChampions" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.totalDamageDoneToChampions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.totalDamageTaken" class="control-label"></label>
+                <input asp-for="ParticipantFrames.totalDamageTaken" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.totalDamageTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.trueDamageDone" class="control-label"></label>
+                <input asp-for="ParticipantFrames.trueDamageDone" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.trueDamageDone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.trueDamageDoneToChampions" class="control-label"></label>
+                <input asp-for="ParticipantFrames.trueDamageDoneToChampions" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.trueDamageDoneToChampions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.trueDamageTaken" class="control-label"></label>
+                <input asp-for="ParticipantFrames.trueDamageTaken" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.trueDamageTaken" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.abilityPower" class="control-label"></label>
+                <input asp-for="ParticipantFrames.abilityPower" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.abilityPower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.armor" class="control-label"></label>
+                <input asp-for="ParticipantFrames.armor" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.armor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.armorPen" class="control-label"></label>
+                <input asp-for="ParticipantFrames.armorPen" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.armorPen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.armorPenPercent" class="control-label"></label>
+                <input asp-for="ParticipantFrames.armorPenPercent" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.armorPenPercent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.attackDamage" class="control-label"></label>
+                <input asp-for="ParticipantFrames.attackDamage" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.attackDamage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.attackSpeed" class="control-label"></label>
+                <input asp-for="ParticipantFrames.attackSpeed" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.attackSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.bonusArmorPenPercent" class="control-label"></label>
+                <input asp-for="ParticipantFrames.bonusArmorPenPercent" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.bonusArmorPenPercent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.bonusMagicPenPercent" class="control-label"></label>
+                <input asp-for="ParticipantFrames.bonusMagicPenPercent" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.bonusMagicPenPercent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.ccReduction" class="control-label"></label>
+                <input asp-for="ParticipantFrames.ccReduction" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.ccReduction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.cooldownReduction" class="control-label"></label>
+                <input asp-for="ParticipantFrames.cooldownReduction" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.cooldownReduction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.health" class="control-label"></label>
+                <input asp-for="ParticipantFrames.health" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.health" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.healthMax" class="control-label"></label>
+                <input asp-for="ParticipantFrames.healthMax" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.healthMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.healthRegen" class="control-label"></label>
+                <input asp-for="ParticipantFrames.healthRegen" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.healthRegen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.lifesteal" class="control-label"></label>
+                <input asp-for="ParticipantFrames.lifesteal" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.lifesteal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicPen" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicPen" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicPen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicPenPercent" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicPenPercent" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicPenPercent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.magicResist" class="control-label"></label>
+                <input asp-for="ParticipantFrames.magicResist" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.magicResist" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.movementSpeed" class="control-label"></label>
+                <input asp-for="ParticipantFrames.movementSpeed" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.movementSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.power" class="control-label"></label>
+                <input asp-for="ParticipantFrames.power" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.power" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.powerMax" class="control-label"></label>
+                <input asp-for="ParticipantFrames.powerMax" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.powerMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.powerRegen" class="control-label"></label>
+                <input asp-for="ParticipantFrames.powerRegen" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.powerRegen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParticipantFrames.spellVamp" class="control-label"></label>
+                <input asp-for="ParticipantFrames.spellVamp" class="form-control" />
+                <span asp-validation-for="ParticipantFrames.spellVamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

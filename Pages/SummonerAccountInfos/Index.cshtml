@@ -14,15 +14,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].SummonerId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].AccountId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].PuuId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].SummonerName)
             </th>
             <th>
@@ -40,21 +31,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.SummonerAccountInfo[0].RecordCreated)
             </th>
+            <th>Ranked Info</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model.SummonerAccountInfo) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SummonerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PuuId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SummonerName)
             </td>
@@ -68,17 +51,17 @@
                 @Html.DisplayFor(modelItem => item.ProfileIconId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastUpdated)
+                @item.LastUpdated.Month/@item.LastUpdated.Day/@item.LastUpdated.Year | @item.LastUpdated.Hour:@item.LastUpdated.Minute:@item.LastUpdated.Second
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RecordCreated)
+                @item.RecordCreated.Month/@item.RecordCreated.Day/@item.RecordCreated.Year | @item.RecordCreated.Hour:@item.RecordCreated.Minute:@item.RecordCreated.Second
             </td>
             <td>
                 @foreach(var RANKINFO in Model.RankedInfo)
                 {
                     if(item.SummonerId == RANKINFO.SummonerId)
                     {
-                        <p>@RANKINFO.SummonerAccountInfo.ProfileIconId</p>
+                        <p>@RANKINFO.QueueType @RANKINFO.Tier @RANKINFO.Rank @RANKINFO.LeaguePoints LP</p>
                     }
                 }
             </td>

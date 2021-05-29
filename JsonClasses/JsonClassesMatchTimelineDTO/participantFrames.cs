@@ -7,9 +7,9 @@ namespace LeagueMatchHistory.JsonClasses.JsonClassesMatchTimelineDTO
 {
     public class participantFrames
     {
-        public List<championStats> championStats { get; set; }
+        public championStats championStats { get; set; }
         public int currentGold { get; set; }
-        public List<damageStats> damageStats { get; set; }
+        public damageStats damageStats { get; set; }
         public int goldPerSecond { get; set; }
         public int jungleMinionsKilled { get; set; }
         public int level { get; set; }

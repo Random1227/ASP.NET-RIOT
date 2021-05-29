@@ -1,0 +1,295 @@
+﻿@page
+@model LeagueMatchHistory.Pages.ParticipantFramess.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ParticipantFrames</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.MatchId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.MatchId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.currentGold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.currentGold)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.goldPerSecond)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.goldPerSecond)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.jungleMinionsKilled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.jungleMinionsKilled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.level)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.level)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.minionsKilled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.minionsKilled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.participantId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.participantId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.timeEnemySpentControlled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.timeEnemySpentControlled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.totalGold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.totalGold)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.xp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.xp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.x)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.x)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.y)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.y)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicDamageDone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicDamageDone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicDamageDoneToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicDamageDoneToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.physicalDamageDone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.physicalDamageDone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.physicalDamageDoneToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.physicalDamageDoneToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.physicalDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.physicalDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.totalDamageDone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.totalDamageDone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.totalDamageDoneToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.totalDamageDoneToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.totalDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.totalDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.trueDamageDone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.trueDamageDone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.trueDamageDoneToChampions)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.trueDamageDoneToChampions)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.trueDamageTaken)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.trueDamageTaken)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.abilityPower)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.abilityPower)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.armor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.armor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.armorPen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.armorPen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.armorPenPercent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.armorPenPercent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.attackDamage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.attackDamage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.attackSpeed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.attackSpeed)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.bonusArmorPenPercent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.bonusArmorPenPercent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.bonusMagicPenPercent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.bonusMagicPenPercent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.ccReduction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.ccReduction)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.cooldownReduction)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.cooldownReduction)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.health)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.health)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.healthMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.healthMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.healthRegen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.healthRegen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.lifesteal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.lifesteal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicPen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicPen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicPenPercent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicPenPercent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.magicResist)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.magicResist)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.movementSpeed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.movementSpeed)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.power)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.power)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.powerMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.powerMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.powerRegen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.powerRegen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ParticipantFrames.spellVamp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ParticipantFrames.spellVamp)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ParticipantFrames.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

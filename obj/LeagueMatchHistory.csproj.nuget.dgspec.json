@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rando\\Documents\\GitHub\\ASP.NET-RIOT\\LeagueMatchHistory.csproj": {}
+    "C:\\Git Projects\\ASP.NET-RIOT\\LeagueMatchHistory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rando\\Documents\\GitHub\\ASP.NET-RIOT\\LeagueMatchHistory.csproj": {
+    "C:\\Git Projects\\ASP.NET-RIOT\\LeagueMatchHistory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rando\\Documents\\GitHub\\ASP.NET-RIOT\\LeagueMatchHistory.csproj",
+        "projectUniqueName": "C:\\Git Projects\\ASP.NET-RIOT\\LeagueMatchHistory.csproj",
         "projectName": "LeagueMatchHistory",
-        "projectPath": "C:\\Users\\rando\\Documents\\GitHub\\ASP.NET-RIOT\\LeagueMatchHistory.csproj",
+        "projectPath": "C:\\Git Projects\\ASP.NET-RIOT\\LeagueMatchHistory.csproj",
         "packagesPath": "C:\\Users\\rando\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rando\\Documents\\GitHub\\ASP.NET-RIOT\\obj\\",
+        "outputPath": "C:\\Git Projects\\ASP.NET-RIOT\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\rando\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -42,27 +45,27 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SQLite": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -95,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

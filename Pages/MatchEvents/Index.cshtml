@@ -1,0 +1,264 @@
+﻿@page
+@model LeagueMatchHistory.Pages.MatchEvents.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].MatchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].EventType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].afterId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].beforeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].bounty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].buildingType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].gameId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].goldGain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].itemId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].killStreakLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].killType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].killerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].killerTeamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].laneType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].levelUpType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].monsterSubType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].monsterType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].participantId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].x)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].realTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].skillSlot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].teamId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].towerType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].winningTeam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant0)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant6)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant7)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant8)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatchEvent[0].assistingParticipant9)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MatchEvent) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.afterId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.beforeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bounty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.buildingType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gameId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goldGain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.itemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.killStreakLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.killType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.killerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.killerTeamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.laneType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.levelUpType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monsterSubType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.monsterType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.participantId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.x)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.y)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.skillSlot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.towerType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.winningTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant0)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant6)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant7)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant8)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.assistingParticipant9)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

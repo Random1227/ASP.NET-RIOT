@@ -1,0 +1,306 @@
+﻿@page
+@model LeagueMatchHistory.Pages.ParticipantFramess.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].MatchId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].currentGold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].goldPerSecond)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].jungleMinionsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].minionsKilled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].participantId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].timeEnemySpentControlled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].totalGold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].xp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].x)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].y)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicDamageDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicDamageDoneToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].physicalDamageDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].physicalDamageDoneToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].physicalDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].totalDamageDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].totalDamageDoneToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].totalDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].trueDamageDone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].trueDamageDoneToChampions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].trueDamageTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].abilityPower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].armor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].armorPen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].armorPenPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].attackDamage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].attackSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].bonusArmorPenPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].bonusMagicPenPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].ccReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].cooldownReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].health)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].healthMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].healthRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].lifesteal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicPen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicPenPercent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].magicResist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].movementSpeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].power)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].powerMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].powerRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParticipantFrames[0].spellVamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ParticipantFrames) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatchId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.currentGold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.goldPerSecond)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jungleMinionsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.minionsKilled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.participantId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timeEnemySpentControlled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalGold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.xp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.x)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.y)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageDoneToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageDoneToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.physicalDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageDoneToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageDone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageDoneToChampions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trueDamageTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.abilityPower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.armor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.armorPen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.armorPenPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.attackDamage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.attackSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bonusArmorPenPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bonusMagicPenPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ccReduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cooldownReduction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.health)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.healthMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.healthRegen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lifesteal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicPen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicPenPercent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.magicResist)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.movementSpeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.power)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.powerMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.powerRegen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spellVamp)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -30,11 +30,11 @@ namespace LeagueMatchHistory.Pages.MainPages
         public IList<RankedInfo> AllRankedInfo { get; set; }
 
         [BindProperty]
-        public SummonerAccountInfo SummonerInfo { get; set; }
+        public SummonerAccountInfo SummonerAccountInfo { get; set; }
 
         [BindProperty]
         public IList<RankedInfo> RankedInfo { get; set; }
-
+        [BindProperty]
         public string SummonerName { get; set; }
 
 
@@ -48,25 +48,63 @@ namespace LeagueMatchHistory.Pages.MainPages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            
-            SummonerInfo = await _context.SummonerAccountInfo.FirstOrDefaultAsync(m => m.SummonerName == SummonerName);
+            bool SummonerExists = false;
             if(SummonerName == null)
             {
                 return RedirectToPage();
             }
-            foreach(var item in AllRankedInfo)
+
+            AllSummonerInfo = await _context.SummonerAccountInfo.ToListAsync();
+
+            AllRankedInfo = await _context.RankedInfo.ToListAsync();
+
+            foreach (var sum in AllSummonerInfo)
             {
-                if(item.SummonerName == SummonerName)
+                if(sum.SummonerName == SummonerName)
                 {
-                    RankedInfo.Add(item);
+                    SummonerExists = true;
+                    SummonerAccountInfo = await _context.SummonerAccountInfo.FirstOrDefaultAsync(m => m.SummonerName == SummonerName);
+                    _context.Attach(SummonerAccountInfo).State = EntityState.Modified;
+                }
+                else
+                {
+                    SummonerExists = false;
+                }
+            }
+
+            Methods.apiCalls api = new Methods.apiCalls();
+
+            var SumInfo = api.GetSummoner(SummonerAccountInfo);
+            var RankInfo = api.GetRankedInformation(SumInfo.SummonerId);
+
+
+            foreach(var item in RankInfo)
+            {
+                if(_context.RankedInfo.Any(e =>e.SummonerId == item.SummonerId && _context.RankedInfo.Any(e => e.QueueType == item.QueueType)))
+                {
+                    _context.Attach(item).State = EntityState.Modified;
+                }
+                else
+                {
+                    _context.RankedInfo.Add(item);
                 }
             }
 
 
 
 
-
-            return RedirectToPage();
+            if (!SummonerExists)
+            {
+                SumInfo.RecordCreated = DateTime.Now;
+                _context.SummonerAccountInfo.Add(SumInfo);
+            }
+            else
+            {
+                _context.Attach(SumInfo).State = EntityState.Modified;
+            }
+            
+            await _context.SaveChangesAsync();
+            return Redirect("/SummonerAccountInfos/Index");
         }
 
     }
